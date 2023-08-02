@@ -18,9 +18,13 @@ for(let i =0; i<=zerosInNums; i++){
     }
 }
 
+//add zeros
+for(let i =0; i<zerosInNums; i++){
+    nums.push(0)
+}
 console.log(nums)
 
 
 return nums;
 }
-moveZeroes([0,0,1])
+moveZeroes([0])
