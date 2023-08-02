@@ -46,7 +46,7 @@ let splicedFirstWord;
 for(let i =0; i< cleanedWords.length; i++){
 
     if(cleanedWords[i+1] == ' '){
-      splicedFirstWord = cleanedWords.splice(0, i+2)
+      splicedFirstWord = cleanedWords.splice(0, i+1)
         finalWords.push(splicedFirstWord.join(''))
         break;
     }
@@ -60,7 +60,7 @@ while(r<cleanedWords.length){
     }else{
         for(let i=0; i<cleanedWords.length; i++){
             if(cleanedWords[i+1] == ' '){
-               splicedMiddleWord =  cleanedWords.splice(0, i+2)
+               splicedMiddleWord =  cleanedWords.splice(0, i+1)
                finalWords.push(splicedMiddleWord.join(''))
                 break;
             }
@@ -72,13 +72,25 @@ while(r<cleanedWords.length){
 // get the last word
 let splicedFinalWord = []
 for(let i = 0; i<cleanedWords.length; i++){
-    if(cleanedWords[i] !== ' ')
+    if(cleanedWords[i] !== ' '){
     splicedFinalWord.push(cleanedWords[i])
+
+    }
 }
 
 finalWords.push(splicedFinalWord.join(''))
 
+//reverse the words 
+let lengthOfFinalWords = finalWords.length;
+let reversedWords = [];
+let t = lengthOfFinalWords;
+while(t!==0){
+    reversedWords.push(finalWords[t-1])
+    t --;
+}
+
 console.log(cleanedWords.join(','))
 console.log(finalWords.join(','))
+console.log(reversedWords.join(','))
 }// end of main function
-reverseWords("   hello world       general    kevin    mikins")
+reverseWords("F R  I   E    N     D      S      ")
