@@ -12,10 +12,10 @@
       word2Array.push(word2[a])
     }
    
-    //empty string
+    //declare and empty string
     let resultArray = []
    
-    //test cases
+    //test cases 
     if (word1Array.length > word2Array.length) {
       for(let b = 0; b < word1Array.length; b++){
          resultArray.push(word1Array[b],word2Array[b])
